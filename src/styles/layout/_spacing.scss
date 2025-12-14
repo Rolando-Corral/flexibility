@@ -14,3 +14,28 @@
 .w-full{
     width: 100%;
 }
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.mt-16{
+    margin-top: 16px;
+}
+
+.mb-0{
+    margin-bottom: 0px;
+}
+
+.mb-16{
+    margin-bottom: 16px;
+}
+
+.mb-32{
+    margin-bottom: 32px;
+}

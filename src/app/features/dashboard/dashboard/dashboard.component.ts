@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GenericButtonConfig } from 'src/app/shared/atoms/generic-button/interface/generic-button.interface';
+import { TitleConfig } from 'src/app/shared/atoms/generic-title/interface/titles.iterface';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,24 +9,18 @@ import { GenericButtonConfig } from 'src/app/shared/atoms/generic-button/interfa
 })
 export class DashboardComponent implements OnInit {
 
-  public buttonConfig: GenericButtonConfig = {
+  public buttonBackConfig: GenericButtonConfig = {
     label: 'Go to showroom',
     classMode: 'btn-unbordered primary',
     route: '/showroom'
   };
-
-  public saveConfig: GenericButtonConfig = {
-    label: 'Guardar',
-    classMode: 'btn-success secondary',
-    icon: 'bi-save',
-    action: () => this.save(),
-  };
-
-  public editConfig: GenericButtonConfig = {
-    label: 'Editar',
-    classMode: 'btn-edit',
-    icon: 'bi-pencil',
-    action: () => this.edit(),
+  
+  public titleConfig: TitleConfig = {
+    title: 'Dashboard',
+    subtitle: 'Welcome to your dashboard',
+    // iconT: 'bi-house',
+    styleTitle: 'text-glow',
+    // iconSb: 'bi-arrow-right'
   };
 
   constructor() { }
@@ -33,15 +28,5 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   
   }
-
-  save(): void {
-    console.log('save');
-  }
-
-  edit(): void {
-    console.log('edit');
-  }
-
-  
 
 }

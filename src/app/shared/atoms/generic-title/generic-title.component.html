@@ -1,1 +1,23 @@
-<p>generic-title works!</p>
+<div class="title-container">
+
+  <div class="title-container row mb-0">
+    <i *ngIf="titleConfig.iconT" class="primary text-glow-2 bi" [ngClass]="titleConfig.iconT"></i>
+  
+    <h1 class="primary" [ngClass]="titleConfig.styleTitle">
+      {{ titleConfig.title }}
+    </h1>
+  
+  </div>
+
+  <div class="title-container row mb-0" *ngIf="titleConfig.subtitle" >
+  
+    <p class="info text-glow-2">
+      {{ titleConfig.subtitle }}
+    </p>
+   <i *ngIf="titleConfig.iconSb" class="primary text-glow-2 bi" [ngClass]="titleConfig.iconSb"></i>
+    <i></i>
+
+  </div>
+
+
+</div>
