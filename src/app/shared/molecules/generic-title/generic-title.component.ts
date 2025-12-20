@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TitleConfig } from './interface/titles.iterface';
 
@@ -9,7 +9,7 @@ import { TitleConfig } from './interface/titles.iterface';
   templateUrl: './generic-title.component.html',
   styleUrls: ['./generic-title.component.scss']
 })
-export class GenericTitleComponent implements OnInit {
+export class GenericTitleComponent {
 
   @Input() public titleConfig: TitleConfig = {
     title: '',
@@ -18,11 +18,5 @@ export class GenericTitleComponent implements OnInit {
     styleTitle: '',
     iconSb: ''
   };
-
-  constructor() { }
-
-  ngOnInit(): void {
-    console.log('title: ', this.titleConfig);
-  }
 
 }
