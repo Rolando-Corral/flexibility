@@ -1,5 +1,8 @@
 @use '../base/colors' as *;
 
+/*
+CONTAINER: es el contenedor mas grande que puede haber en la app.
+*/
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -9,29 +12,26 @@
   border-radius: 8px;
 }
 
-.simply-container {
-  width:auto;
-  margin: 10px auto;
-  padding: 16px;
-
-  border: $primary solid 1px;
-  border-radius: 8px;
-}
-
-.section-container {
+/*
+HEADER-CONTAINER: es el contenedor para encabezados de paginas.
+*/
+.header-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 16px;
+  justify-content: space-between;
+  align-self: start;
+  padding:10px;
 }
 
+/*
+TITLE-CONTAINER: es el contenedor para titulos.
+tambien puede contener subtitulos.
+*/
 .title-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 4px;
-  margin-bottom: 24px;
 
   h1{
     margin: 0;
@@ -43,13 +43,79 @@
     padding: 0;
   }
 }
-.header-container {
+
+/*
+SECTION-CONTAINER: contenedor para secciones grandes de una pagina.
+// Cross-Browser //
+  SI navegador es Firefox
+    → aplica scrollbar-width / scrollbar-color
+  SINO SI navegador es Chrome / Edge / Safari
+    → aplica ::-webkit-scrollbar
+*/
+.section-container {
+  max-width: 1200px;
+  margin: 5px auto;
+  padding: 16px;
+  overflow-y: auto;
+
   display: flex;
-  justify-content: space-between;
-  padding: 15px 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 16px;
+
+  border: $primary solid 1px;
+  border-radius: 8px;
+
+  background-color: #000;
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: $primary #000;
+
+  scroll-behavior: smooth;
 }
+/*Chrome / Edge / Safari*/
+.section-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.section-container::-webkit-scrollbar-track {
+  background: #000;
+  border-radius: 8px;
+}
+
+.section-container::-webkit-scrollbar-thumb {
+  background-color: $primary;
+  border-radius: 8px;
+  border: 2px solid #000;
+}
+
+.section-container::-webkit-scrollbar-thumb:hover {
+  background-color: lighten($primary, 10%);
+}
+
+.h-full{
+  height: 80vh;
+}
+
+.simply-container {
+  width:auto;
+  margin: 10px auto;
+  padding: 16px;
+
+  border: $primary solid 1px;
+  border-radius: 8px;
+}
+
+
+
 .footer-container {
   display: flex;
   justify-content: space-between;
   padding: 15px 10px;
+}
+
+.fixed-top{
+  position: sticky;
+  top: auto;
 }
