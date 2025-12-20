@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { GenericButtonConfig } from 'src/app/shared/atoms/generic-button/interface/generic-button.interface';
 import { TitleConfig } from 'src/app/shared/molecules/generic-title/interface/titles.iterface';
 
@@ -7,7 +7,7 @@ import { TitleConfig } from 'src/app/shared/molecules/generic-title/interface/ti
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
 
    public buttonBackConfig: GenericButtonConfig = {
       label: 'Go to showroom',
@@ -23,10 +23,5 @@ export class DashboardComponent implements OnInit {
       // iconSb: 'bi-arrow-right'
     };
 
-  constructor() { }
-
-  ngOnInit(): void {
-  
-  }
 
 }

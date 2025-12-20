@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { GenericButtonConfig } from 'src/app/shared/atoms/generic-button/interface/generic-button.interface';
 
 @Component({
@@ -6,7 +6,7 @@ import { GenericButtonConfig } from 'src/app/shared/atoms/generic-button/interfa
   templateUrl: './desing-system-showroom.component.html',
   styleUrls: ['./desing-system-showroom.component.scss']
 })
-export class DesingSystemShowroomComponent implements OnInit {
+export class DesingSystemShowroomComponent {
 
   public backButtonConfig: GenericButtonConfig = {
     label: 'Back',
@@ -14,10 +14,5 @@ export class DesingSystemShowroomComponent implements OnInit {
     route: '/',
     icon: 'bi-arrow-left',
   };
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
