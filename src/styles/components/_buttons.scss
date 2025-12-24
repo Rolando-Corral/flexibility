@@ -26,13 +26,13 @@
 }
 
 .btn-info {
-  background-color: $info;
+  background-color: $dark;
   color: $light;
   border: 1px solid $info;
 
   &:hover {
-    background-color: $dark;
-    color: $info;
+    background-color:$info ;
+    color: $dark;
     box-shadow: $glow-info 0px 0px 10px;
   }
 }

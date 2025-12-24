@@ -1,0 +1,16 @@
+<div class="card" [ngClass]="cardConfig.styleCard">
+    <div class="card-header" *ngIf="cardConfig.title">
+        <h3>{{ cardConfig.title }}</h3>
+        <h5>{{ cardConfig.subtitle }}</h5>
+    </div>
+    <div class="card-body">
+        <p>{{ cardConfig.description }}</p>
+        <p>{{ cardConfig.imageUrl }}</p>
+        <p>{{ cardConfig.price }}</p>
+        <p>{{ cardConfig.date }}</p>
+        <p>{{ cardConfig.icon }}</p>
+    </div>
+    <div class="card-footer" *ngIf="cardConfig.footerText">
+        <p>{{ cardConfig.footerText }}</p>
+    </div>
+</div>
