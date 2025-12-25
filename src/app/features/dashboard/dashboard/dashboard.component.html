@@ -7,23 +7,5 @@
 <div class="section-container h-full primary glow-1">
 
 
-<div *ngIf="loading">Cargando...</div>
-
-
-<ul>
-  <li *ngFor="let user of users">
-    {{ user.name }} ({{ user.email }})
-  </li>
-</ul>
-
-
-
-<ul>
-  <li *ngFor="let shopps of shoppings" class="primary">
-    {{ shopps.commerce | titlecase }} - {{ shopps.items }} - {{ shopps.total | currency }} - {{ shopps.date | date:'dd/MM/yyyy' }}
-  </li>
-</ul>
-
-
 
 </div>

@@ -11,7 +11,8 @@ export class DataTestService {
 
   constructor(private http: HttpClient) { }
 
-  getShops(): Observable<Shop[]>{
+public getShops(): Observable<Shop[]> {
     return this.http.get<Shop[]>(this.apiUrl);
   }
+
 }
