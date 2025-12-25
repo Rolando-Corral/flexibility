@@ -1,15 +1,14 @@
 <div class="container fixed-top">
     
-    <generic-header [titleConfig]="titleConfig" [buttonConfig]="buttonShowroomConfig"></generic-header>
+    <generic-header [titleConfig]="titleConfig"></generic-header>
 
 </div>
 
 <div class="section-container h-full primary glow-1">
-    <h2>Ejemplo request al backend</h2>
 
-<generic-button  [config]="usersButtonConfig"></generic-button>
 
 <div *ngIf="loading">Cargando...</div>
+
 
 <ul>
   <li *ngFor="let user of users">

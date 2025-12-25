@@ -1,6 +1,7 @@
 {
   "name": "g35-t10-n",
   "version": "0.0.2",
+
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
