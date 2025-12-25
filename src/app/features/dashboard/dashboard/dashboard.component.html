@@ -1,27 +1,14 @@
 <div class="container fixed-top">
     
-    <generic-header [titleConfig]="titleConfig" [buttonConfig]="buttonShowroomConfig"></generic-header>
+    <generic-header [titleConfig]="titleConfig"></generic-header>
 
 </div>
 
 <div class="section-container h-full primary glow-1">
-    <h2>Ejemplo request al backend</h2>
 
-<generic-button  [config]="usersButtonConfig"></generic-button>
 
 <div *ngIf="loading">Cargando...</div>
 
-<ul>
-  <li *ngFor="let user of users">
-    {{ user.name }} ({{ user.email }})
-  </li>
-</ul>
-
-<ul>
-  <li *ngFor="let shopps of shoppings" class="primary">
-    {{ shopps.commerce | titlecase }} - {{ shopps.items }} - {{ shopps.total | currency }} - {{ shopps.date | date:'dd/MM/yyyy' }}
-  </li>
-</ul>
 
 
 
