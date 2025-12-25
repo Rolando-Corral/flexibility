@@ -12,7 +12,7 @@ import { TitleConfig } from 'src/app/shared/molecules/generic-title/interface/ti
 })
 export class DashboardComponent {
 
-<<<<<<< HEAD
+
   public titleConfig: TitleConfig = {
     title: 'Dashboard',
     subtitle: 'Listado de comercios registrados en la plataforma',
@@ -31,12 +31,5 @@ export class DashboardComponent {
     });
   }
 
-=======
-    public titleConfig: TitleConfig = {
-      title: 'Dashboard'
-    };
-    public loading: boolean = false;
 
-    constructor(private dataTestService: DataTestService) {}
->>>>>>> 32699904251752d78834e1eb7a262bfdfeff8ed0
 }
