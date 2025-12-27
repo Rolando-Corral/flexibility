@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Shop } from 'src/app/core/interfaces/shop.interface';
 import { Shopping } from 'src/app/core/interfaces/shoppings.interface';
 import { DataTestService } from 'src/app/core/services/data-test.service';
 import { GenericButtonConfig } from 'src/app/shared/atoms/generic-button/interface/generic-button.interface';
@@ -18,18 +19,17 @@ export class DashboardComponent {
     subtitle: 'Listado de comercios registrados en la plataforma',
   }
 
-  public shops: Observable<any[]> = this.dataTestService.getShops();
-
+  public shops: Shop[] = [];
 
 
   constructor(private dataTestService: DataTestService) {}
 
 
   ngOnInit(): void {
-    this.shops.subscribe(data => {
-      console.log('Shops data:', data);
+    this.dataTestService.getShops().subscribe((data: Shop[]) => {
+      this.shops = data;
+      console.log('Shops data:', this.shops);
     });
   }
-
 
 }

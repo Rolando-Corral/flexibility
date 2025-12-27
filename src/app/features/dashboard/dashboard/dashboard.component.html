@@ -1,11 +1,33 @@
 <div class="container fixed-top">
-    
-    <generic-header [titleConfig]="titleConfig"></generic-header>
+
+  <generic-header [titleConfig]="titleConfig"></generic-header>
 
 </div>
 
 <div class="section-container h-full primary glow-1">
 
 
+  <div class="shoplist">
+
+    <div class="cardShop" *ngFor="let shop of shops">
+
+      <div class="head-cardShop">
+        <div class="title-cardShop">{{ shop.name }}</div>
+      </div>
+
+      <div class="body-cardShop">
+        <i class="bi bi-shop"></i> <br>
+        type: {{ shop.type }} <br>
+        status: {{ shop.isOpen }} <br>
+      </div>
+
+      <div class="footer-cardShop">
+        address: {{ shop.address }} city: {{ shop.city }}<br>
+      </div>
+
+    </div>
+
+
+  </div>
 
 </div>

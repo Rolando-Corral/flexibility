@@ -13,6 +13,7 @@ export class DataTestService {
 
 public getShops(): Observable<Shop[]> {
     return this.http.get<Shop[]>(this.apiUrl);
+  
   }
 
 }
