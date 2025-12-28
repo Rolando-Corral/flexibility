@@ -6,8 +6,8 @@ export const FOOD_COMMERCE_TYPES: ShopType[] = [
   'verduleria',
   'carniceria',
   'panaderia',
-  'fiambreria',
-  'pescaderia',
+  'kiosco',
+  'pizzeria',
   'dietetica',
   'almacen',
   'mercado'

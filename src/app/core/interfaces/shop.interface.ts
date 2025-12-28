@@ -3,8 +3,8 @@ export type ShopType =
   | 'verduleria'
   | 'carniceria'
   | 'panaderia'
-  | 'fiambreria'
-  | 'pescaderia'
+  | 'kiosco'
+  | 'pizzeria'
   | 'dietetica'
   | 'almacen'
   | 'mercado';

@@ -59,8 +59,7 @@ SECTION-CONTAINER: contenedor para secciones grandes de una pagina.
   overflow-y: auto;
 
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
   gap: 16px;
 
   border: $primary solid 1px;

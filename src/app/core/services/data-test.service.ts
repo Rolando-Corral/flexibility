@@ -7,7 +7,7 @@ import { Shop } from '../interfaces/shop.interface';
   providedIn: 'root'
 })
 export class DataTestService {
-  private apiUrl = 'http://localhost:3000/shop';
+  private apiUrl: string = 'http://localhost:3000/shop';
 
   constructor(private http: HttpClient) { }
 

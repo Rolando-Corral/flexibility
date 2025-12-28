@@ -5,6 +5,7 @@
 // Core palette
 $primary:      #2bd9f0;   // Neon cyan
 $secondary:    #003cff;   // blue brillante
+$tertiary:     #ff00d4;   // Magenta neón
 $greysed:      #adabab;   // Gris desaturado
 
 $light:        #f2f2f2;   // Gris muy claro
@@ -13,7 +14,7 @@ $dark:         #140b0f;   // Negro púrpura
 $danger:       #ff003c;   // Rojo neón intenso
 $warning:      #f9ff00;   // Amarillo eléctrico
 $info:         #7b2cff;   // Violeta neón
-$success:      #00ff6a;   // Verde fosforescente
+$success:      #0ee768;   // Verde fosforescente
 $disabled:     #6b6b6b;   // Gris desaturado
 
 // Optional — sombras y brillos para efectos cyberpunk
@@ -23,3 +24,4 @@ $glow-info:      rgba(141, 76, 252, 0.6);
 $glow-success:   rgba(0, 255, 106, 0.6);
 $glow-danger:    rgba(255, 0, 60, 0.822);
 $glow-warning:   rgba(255, 255, 0, 0.6);
+$glow-tertiary:  rgba(255, 0, 212, 0.6);

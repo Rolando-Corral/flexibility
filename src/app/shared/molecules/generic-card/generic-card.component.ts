@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CardConfig } from './interface/genric-card.interface';
 
 @Component({
@@ -6,13 +6,8 @@ import { CardConfig } from './interface/genric-card.interface';
   templateUrl: './generic-card.component.html',
   styleUrls: ['./generic-card.component.scss']
 })
-export class GenericCardComponent implements OnInit {
+export class GenericCardComponent{
 
   @Input() public cardConfig!: CardConfig;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

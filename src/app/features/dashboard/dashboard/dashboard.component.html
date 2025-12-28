@@ -4,30 +4,35 @@
 
 </div>
 
-<div class="section-container h-full primary glow-1">
+<div class="section-container center h-full primary glow-1">
 
 
-  <div class="shoplist">
+  <div class="shop-row" *ngFor="let shop of shops">
 
-    <div class="cardShop" *ngFor="let shop of shops">
+  <!-- Avatar -->
+  <div class="shop-avatar">
+    <img [src]="getShopIcon(shop.type)" [alt]="shop.type">
+  </div>
 
-      <div class="head-cardShop">
-        <div class="title-cardShop">{{ shop.name }}</div>
-      </div>
-
-      <div class="body-cardShop">
-        <i class="bi bi-shop"></i> <br>
-        type: {{ shop.type }} <br>
-        status: {{ shop.isOpen }} <br>
-      </div>
-
-      <div class="footer-cardShop">
-        address: {{ shop.address }} city: {{ shop.city }}<br>
-      </div>
-
+  <!-- Info principal -->
+  <div class="shop-content">
+    <div class="shop-header">
+      <span class="shop-name">{{ shop.name }}</span>
+      <span
+        class="shop-status"
+        [class.open]="shop.isOpen"
+        [class.closed]="!shop.isOpen"
+      >
+        {{ shop.isOpen ? 'Abierto' : 'Cerrado' }}
+      </span>
     </div>
 
+    <div class="shop-subtitle">
+      {{ shop.address }} · {{ shop.city }}
+    </div>
+  </div>
 
   </div>
+
 
 </div>
