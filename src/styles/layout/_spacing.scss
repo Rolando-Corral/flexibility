@@ -1,15 +1,17 @@
 @use '../base/colors' as *;
 
 .center{
-    text-align: center;
+    align-items: center;
 }
 
 .left{
     text-align: left;
+    align-items: flex-start;
 }
 
 .right{
     text-align: right;
+    align-items: flex-end;
 }
 
 .w-full{
