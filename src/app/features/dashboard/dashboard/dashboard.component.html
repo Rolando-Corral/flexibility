@@ -4,35 +4,41 @@
 
 </div>
 
-<div class="section-container center h-full primary glow-1">
+<div class="section-container  h-full primary glow-1">
+
+ <div class="half-container text-center">
+  <h1 class="primary ">Detalle de la tienda</h1>
+
+  <ng-container *ngIf="selectedShop; else emptyDetail">
+    <img [src]="getShopIcon(selectedShop.type)" [alt]="selectedShop.type">
+    <p><strong>Nombre:</strong> {{ selectedShop.name }}</p>
+    <p><strong>Dirección:</strong> {{ selectedShop.address }}</p>
+    <p><strong>Ciudad:</strong> {{ selectedShop.city }}</p>
+    <p><strong>Telefono:</strong> {{ selectedShop.phone }}</p>
+    <p>
+      <strong>Estado:</strong>
+      {{ selectedShop.isOpen ? 'Abierto' : 'Cerrado' }}
+    </p>
+  </ng-container>
+
+  <ng-template #emptyDetail>
+    <p class="text-center">
+      Seleccioná un comercio de la lista
+    </p>
+  </ng-template>
+</div>
 
 
-  <div class="shop-row" *ngFor="let shop of shops">
+  <div class="half-container">
+    <div>
+      <div *ngFor="let shop of shops" (click)="onSelectShop(shop)"  [class.selected]="shop.id === selectedShop?.id">
+        <generic-item-row [cardConfig]="shop"></generic-item-row>
 
-  <!-- Avatar -->
-  <div class="shop-avatar">
-    <img [src]="getShopIcon(shop.type)" [alt]="shop.type">
-  </div>
+      </div>
 
-  <!-- Info principal -->
-  <div class="shop-content">
-    <div class="shop-header">
-      <span class="shop-name">{{ shop.name }}</span>
-      <span
-        class="shop-status"
-        [class.open]="shop.isOpen"
-        [class.closed]="!shop.isOpen"
-      >
-        {{ shop.isOpen ? 'Abierto' : 'Cerrado' }}
-      </span>
     </div>
-
-    <div class="shop-subtitle">
-      {{ shop.address }} · {{ shop.city }}
-    </div>
   </div>
 
-  </div>
 
 
 </div>

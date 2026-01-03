@@ -1,11 +1,8 @@
 export interface CardConfig {
-    title: string;
-    subtitle?: string;
-    styleCard?: string;
-    description?: string;
-    imageUrl?: string;
-    footerText?: string;
-    price?: number;
-    date?: Date;
-    icon?: string;
+    type: string;
+    name: string;
+    isOpen: boolean;
+    address: string;
+    city: string;
+    phone?: string;
 }

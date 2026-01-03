@@ -1,0 +1,29 @@
+
+
+  <div class="item-row">
+
+  <!-- Avatar -->
+  <div class="item-avatar">
+    <img [src]="getShopIcon(cardConfig.type)" [alt]="cardConfig.type">
+  </div>
+
+  <!-- Info principal -->
+  <div class="item-content">
+    <div class="item-header">
+      <span class="item-name">{{ cardConfig.name }}</span>
+      <span
+        class="item-status"
+        [class.open]="cardConfig.isOpen"
+        [class.closed]="!cardConfig.isOpen"
+      >
+        {{ cardConfig.isOpen ? 'Abierto' : 'Cerrado' }}
+      </span>
+    </div>
+
+    <div class="item-subtitle">
+      {{ cardConfig.phone }} - {{ cardConfig.address }} · {{ cardConfig.city }}
+    </div>
+  </div>
+
+  </div>
+

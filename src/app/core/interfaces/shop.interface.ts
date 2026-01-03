@@ -16,4 +16,5 @@ export interface Shop {
   address: string;
   city: string;
   isOpen: boolean;
+  phone: string;
 }
