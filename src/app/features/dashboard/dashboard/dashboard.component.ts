@@ -3,6 +3,7 @@ import { Shop } from 'src/app/core/interfaces/shop.interface';
 import { DataTestService } from 'src/app/core/services/data-test.service';
 import { CardConfig } from 'src/app/shared/molecules/generic-card/interface/genric-card.interface';
 import { TitleConfig } from 'src/app/shared/molecules/generic-title/interface/titles.iterface';
+import { getShopIcon } from 'src/app/shared/utils/shop-icon.util';
 
 @Component({
   selector: 'app-dashboard',
@@ -23,6 +24,7 @@ export class DashboardComponent {
   public loading: boolean = false;
   public hasError: boolean = false;
   public isEmpty: boolean = false;
+  public iconPath: string = '';
 
   // estado seleccionado
   public selectedShop: Shop | null = null;
@@ -41,6 +43,8 @@ export class DashboardComponent {
     this.dataTestService.getShops().subscribe({
       next: (data: Shop[]) => {
         this.shops = data;
+        this.iconPath = this.getIcon();
+
         this.isEmpty = !data || data.length === 0;
         this.loading = false;
       },
@@ -56,18 +60,9 @@ export class DashboardComponent {
     console.log('Selected shop:', this.selectedShop);
   }
 
-  public getShopIcon(type: string): string {
-    const icons: Record<string, string> = {
-      supermercado: 'assets/imgs/shops/super.png',
-      carniceria: 'assets/imgs/shops/carne.png',
-      panaderia: 'assets/imgs/shops/pan.png',
-      verduleria: 'assets/imgs/shops/verdu.png',
-      kiosco: 'assets/imgs/shops/kiosco.png',
-      pizzeria: 'assets/imgs/shops/pizza.png',
-      almacen: 'assets/imgs/shops/almacen.png',
-      dietetica: 'assets/imgs/shops/diet.png',
-    };
-
-    return icons[type] ?? 'assets/imgs/shops/default.png';
+  getIcon(): string {
+    return getShopIcon(this.selectedShop?.type || '');
   }
+
+
 }
