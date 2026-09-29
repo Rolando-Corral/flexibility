@@ -1,1 +1,19 @@
-<p>shop-detail works!</p>
+<h1 class="primary text-center">Detalle de la tienda</h1>
+
+<ng-container *ngIf="shop; else emptyState">
+    <img [src]="getShopIcon(shop.type)" [alt]="shop.type">
+  <p><strong>Nombre:</strong> {{ shop.name }}</p>
+  <p><strong>Dirección:</strong> {{ shop.address }}</p>
+  <p><strong>Ciudad:</strong> {{ shop.city }}</p>
+  <p><strong>Telefono:</strong> {{ shop.phone }}</p>
+  <p>
+    <strong>Estado:</strong>
+    {{ shop.isOpen ? 'Abierto' : 'Cerrado' }}
+  </p>
+</ng-container>
+
+<ng-template #emptyState>
+  <p class="text-center">
+    Seleccioná un comercio de la lista
+  </p>
+</ng-template>
